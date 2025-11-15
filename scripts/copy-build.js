@@ -2,7 +2,6 @@
  *  Copies the built script .js to Firebot's scripts folder
  */
 const fs = require("fs").promises;
-const { Console } = require("console");
 const path = require("path");
 
 const extractScriptName = () => {

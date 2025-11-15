@@ -5,11 +5,36 @@ import tseslint from 'typescript-eslint';
 import stylistic from '@stylistic/eslint-plugin';
 
 export default tseslint.config(
+  {
+    ignores: ['dist/**', 'node_modules/**', '*.js.map'],
+  },
   eslint.configs.recommended,
-  tseslint.configs.strictTypeChecked,
-  tseslint.configs.stylistic,
-    {
+  {
+        files: ['**/*.js', '**/*.mjs', '**/*.cjs'],
+        ...tseslint.configs.disableTypeChecked,
+        languageOptions: {
+            globals: {
+                require: 'readonly',
+                module: 'readonly',
+                __dirname: 'readonly',
+                __filename: 'readonly',
+                process: 'readonly',
+                console: 'readonly',
+                Buffer: 'readonly',
+                exports: 'writable',
+                global: 'readonly',
+            },
+        },
+        rules: {
+            'no-console': 'off',
+        },
+  },
+  {
         files: ['**/*.ts', '**/*.tsx'],
+        extends: [
+            ...tseslint.configs.strictTypeChecked,
+            ...tseslint.configs.stylistic,
+        ],
         languageOptions: {
             parserOptions: {
                 projectService: true,

@@ -10,6 +10,8 @@
         "build:version": "node ./scripts/update-version.js",
         "build:webpack": "webpack",
         "copy": "node ./scripts/copy-build.js",
+        "test": "jest",
+        "lint": "eslint .",
         "prepare": ""
     },
     "author": "thestaticmage",
@@ -21,7 +23,7 @@
         "@types/jest": "^30.0.0",
         "jest": "^30.0.4",
         "terser-webpack-plugin": "^5.3.10",
-        "ts-jest": "^29.4.0",
+        "ts-jest": "^29.4.5",
         "ts-loader": "^9.5.1",
         "typescript": "^5.3.3",
         "typescript-eslint": "^8.33.1",

@@ -4,39 +4,20 @@
 
 This [Firebot](https://firebot.app) integration helps to support the ["Combo"](https://help.twitch.tv/s/article/combos) bits cheering event on Twitch. This is intended to be a temporary workaround until proper support for combos is added to Firebot. As per [this feature request issue](https://github.com/crowbartools/Firebot/issues/3176), combos will be added to Firebot only when they are no longer considered beta by Twitch.
 
-This integration provides:
+## Features
 
-- A "Combo" event
-- Support for the "Cheer Bits Amount" filter in that "Combo" event
-- Support for the `$cheerBitsAmount` variable in that "Combo" event
+- A "Combo" event for Twitch bits combos
+- Support for the "Cheer Bits Amount" filter in the "Combo" event
+- Support for the `$cheerBitsAmount` variable in the "Combo" event
 
 When people use a combo, they are sending small cheers of a predefined amount (e.g. 5 bits) at a time. The combo event in Firebot will fire once for each time someone clicks on the combo button (which may be a heart, dinosaur, horse, or whatever). Hopefully this will result in a lot of clicks from your viewers! However, if you have an elaborate setup to recognize cheers, such as a long sound or on-screen animation, you might want to consider an approach (like my [Firebot Rate Limiter](https://github.com/TheStaticMage/firebot-rate-limiter)) to avoid being overwhelmed.
 
 :warning: When/if support for combos is added to Firebot, I will no longer support this script. At that time, you will need to migrate to the implementation provided by Firebot, which will not necessarily be backward compatible with this. In other words, you may need to update or redo any effect lists or event handlers that you create using this event.
 
-## Installation
+## Documentation
 
-:warning: **This script requires Firebot 5.65 or higher. At present, you'll need to use a [nightly build](https://github.com/crowbartools/firebot-nightly/releases).**
-
-The script needs to be installed like any other Firebot startup script:
-
-1. From the latest [Release](https://github.com/TheStaticMage/firebot-combo-event/releases), download `firebot-combo-event-<version>.js` and copy it into your Firebot scripts directory (File &gt; Open Data Folder, then select the "scripts" directory).
-
-2. Enable custom scripts in Firebot (Settings &gt; Scripts) if you have not already done so.
-
-3. Add the `firebot-combo-event-<version>.js` script that you just added as a startup script (Settings &gt; Scripts &gt; Manage Startup Scripts &gt; Add New Script).
-
-4. Restart Firebot.
-
-## Upgrading
-
-The script needs to be upgraded like any other Firebot startup script:
-
-1. From the latest [Release](https://github.com/TheStaticMage/firebot-combo-event/releases), download `firebot-combo-event-<version>.js` and copy it into your Firebot scripts directory (File &gt; Open Data Folder, then select the "scripts" directory).
-
-2. Go in to Settings &gt; Scripts &gt; Manage Startup Scripts and click the **Edit** button next to this script. Select the correctly versioned script from the dropdown. (If necessary, click on the icon to refresh the directory contents.)
-
-3. Restart Firebot.
+- [Installation](/doc/installation.md)
+- [Upgrading](/doc/upgrading.md)
 
 ## Support
 

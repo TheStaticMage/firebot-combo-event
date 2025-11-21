@@ -17,6 +17,7 @@ When people use a combo, they are sending small cheers of a predefined amount (e
 ## Documentation
 
 - [Installation](/doc/installation.md)
+- [Configuration](/doc/configuration.md)
 - [Upgrading](/doc/upgrading.md)
 
 ## Support

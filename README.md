@@ -11,4 +11,4 @@ To remove this plugin from Firebot:
 - Remove any events you may have created to handle combo events
 - Go to Settings > Scripts > Manage Startup Scripts and delete the "Combo Event" script
 - Restart Firebot
-- Remove the `firebot-combo-<version>.js` script from your Firebot scripts directory
+- Remove the `firebot-combo-event-<version>.js` script from your Firebot scripts directory
